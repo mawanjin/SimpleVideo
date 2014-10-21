@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <SurfaceView
+        android:id="@+id/surface"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"/>
+
+    <RelativeLayout
+        android:id="@+id/btm"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/surface"
+        android:layout_alignParentLeft="true"
+        android:gravity="center_vertical" >
+
+        <Button
+            android:id="@+id/issrt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始"
+            android:textColor="@android:color/black" />
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/quanping"
+            android:layout_toRightOf="@+id/issrt"
+            android:progressDrawable="@drawable/player_setting_bright_progressbar"
+
+            android:max="255" />
+
+        <Button
+            android:id="@+id/quanping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="全屏"
+            android:textColor="@android:color/black" />
+        
+         <Button
+            android:id="@+id/xiaoping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="小屏"
+            android:visibility="gone"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+</RelativeLayout>
