@@ -1,57 +1,77 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/white" >
-
-    <SurfaceView
-        android:id="@+id/surface"
-        android:layout_width="fill_parent"
-        android:layout_height="200dp"
-        android:layout_alignParentTop="true"/>
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
 
     <RelativeLayout
-        android:id="@+id/btm"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/surface"
-        android:layout_alignParentLeft="true"
-        android:gravity="center_vertical" >
+            android:id="@+id/container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+        <SurfaceView
+                android:id="@+id/surface"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true"/>
+        <ImageView
+                android:id="@+id/centerPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/player"
+                android:layout_centerInParent="true"/>
 
-        <Button
-            android:id="@+id/issrt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="开始"
-            android:textColor="@android:color/black" />
+        <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"/>
+    </RelativeLayout>
 
-        <SeekBar
-            android:id="@+id/seekbar"
+
+
+    <RelativeLayout
+            android:id="@+id/btm"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/quanping"
-            android:layout_toRightOf="@+id/issrt"
-            android:progressDrawable="@drawable/player_setting_bright_progressbar"
+            android:layout_alignBottom="@+id/container"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:visibility="invisible">
 
-            android:max="255" />
+        <ImageView
+                android:id="@+id/issrt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/player"/>
 
-        <Button
-            android:id="@+id/quanping"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:text="全屏"
-            android:textColor="@android:color/black" />
-        
-         <Button
-            android:id="@+id/xiaoping"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:text="小屏"
-            android:visibility="gone"
-            android:textColor="@android:color/black" />
+        <SeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/quanping"
+                android:layout_toRightOf="@+id/issrt"
+                android:progressDrawable="@drawable/player_setting_bright_progressbar"
+                android:thumb="@drawable/player_settings_bright_thumb"
+                android:layout_marginLeft="-10dp"
+                android:layout_marginRight="-10dp"
+                />
+
+        <ImageView
+                android:id="@+id/quanping"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/screen"/>
+
+        <!--<ImageView-->
+                <!--android:id="@+id/xiaoping"-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:visibility="gone"-->
+                <!--android:src="@drawable/screen"/>-->
     </RelativeLayout>
 
 </RelativeLayout>
